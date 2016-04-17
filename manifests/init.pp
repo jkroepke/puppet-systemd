@@ -1,8 +1,25 @@
 class systemd (
-  $unit_file_dir,
-) {
+  $unit_directory = $systemd::params::unit_directory,
+  $hostname = undef,
+  $locale   = undef,
+) inherits systemd::params {
 
-  exec { 'systemctl deamon-reload':
-    refreshonly => true
+  unless defined(Exec['systemctl deamon-reload']) {
+    exec { 'systemctl deamon-reload':
+      command     => '/usr/bin/systemctl deamon-reload',
+      refreshonly => true
+    }
+  }
+
+  unless empty($hostname) {
+    class { 'systemd::hostname':
+      hostname  => $hostname;
+    }
+  }
+
+  unless empty($locale) {
+    class { 'systemd::locale':
+      locale  => $locale;
+    }
   }
 }
