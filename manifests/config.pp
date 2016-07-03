@@ -33,6 +33,6 @@ define systemd::config (
       fail ("Unknown section for ${service}!")
     }
 
-    create_ini_settings({ 'path' => "/etc/systemd/${service}.conf" }, { "${section}" => $options })
+    create_ini_settings({ "${section}" => $options }, { 'path' => "/etc/systemd/${service}.conf" })
   }
 }

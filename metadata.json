@@ -1,0 +1,75 @@
+{
+  "name": "jkroepke-systemd",
+  "version": "0.1.0",
+  "author": "Jan-Otto Kröpke",
+  "license": "Apache-2.0",
+  "summary": "Puppet module for manage systemd unit files",
+  "project_page": "https://github.com/jkroepke/puppet-module-systemd",
+  "source": "https://github.com/jkroepke/puppet-module-systemd",
+  "issues_url": "https://github.com/jkroepke/puppet-module-systemd/issues",
+  "tags": ["systemd", "unit", "file", "service", "systemctl"],
+  "dependencies": [
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 3.0.0 < 5.0.0"
+    },
+    {
+      "name": "puppetlabs/inifile",
+      "version_requirement": ">= 1.0.0 < 2.0.0"
+    }
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Debian",
+      "operatingsystemrelease": [
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "14.04"
+      ]
+    },
+    {
+      "operatingsystem": "Gentoo"
+    },
+    {
+      "operatingsystem": "Archlinux"
+    }
+  ],
+  "requirements": [
+    {
+      "name": "pe",
+      "version_requirement": ">= 3.2.0 < 2015.4.0"
+    },
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.2.0 < 5.0.0"
+    }
+  ]
+}
